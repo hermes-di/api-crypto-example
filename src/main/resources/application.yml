@@ -1,0 +1,33 @@
+#api:
+#  crypto:
+#    #默认字符集
+#    charset: utf-8
+#    #默认base64编码
+#    encoding-type: base64
+#
+#    #1. 使用签名注解 (@Signature) 时，这里全局配置 或 注解中配置
+#    signature:
+#      #签名秘钥
+#      secret-key: 13245678
+#      #配置验签超时时间，默认不超时。单位（秒）
+#      timeout: 0
+#
+#    #2. 使用对称性加密解密 (@Symmetric) 注解时，这里全局配置（根据使用的算法选择配置） 或 注解中配置
+#    symmetric:
+#      #AES 密钥长度可以是 128(bit)、192(bit)、256(bit)
+#      AES: 1324567899999999
+#
+#      #DESede(3DES) 密钥长度可以是 128(bit)、192(bit)
+#      DESede: 1324567899999999
+#
+#      #DES 密钥长度是 64(bit)
+#      DES: 13245678
+#
+#
+#    #3. 使用对称性加密解密 (@Asymmetry) 注解时，这里全局配置（根据使用的算法选择配置） 或 注解中配置
+#    asymmetry:
+#      RAS:
+#        #公钥
+#        public-key: xxxx
+#        #私钥
+#        private-key: xxxx
