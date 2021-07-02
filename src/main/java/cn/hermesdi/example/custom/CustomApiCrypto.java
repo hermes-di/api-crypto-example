@@ -45,6 +45,9 @@ public class CustomApiCrypto implements ApiCryptoAlgorithm {
     public boolean isCanRealize(MethodParameter methodParameter, boolean requestOrResponse) {
         // 获取执行 方法或类上的指定注解（注解在类上并且是被继承的无效）
         CustomCrypto annotation = this.getAnnotation(methodParameter, CustomCrypto.class);
+        if (annotation == null) {
+            return false;
+        }
         // 是否请求解密
         if (annotation.isDecryption() && !requestOrResponse) {
             return true;
